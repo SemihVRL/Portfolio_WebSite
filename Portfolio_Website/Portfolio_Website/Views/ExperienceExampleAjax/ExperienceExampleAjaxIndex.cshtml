@@ -1,0 +1,155 @@
+﻿@using EntityLayer.Concrete
+@model List<Experience>
+@{
+    ViewData["Title"] = "ExperienceExampleAjaxIndex";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+
+<div class="col-md-6">
+    <div class="p-2">
+        <button type="button" id="getlistall" class="btn btn-primary">Verileri Getir</button>
+        <button type="button" id="btnadd" class="btn btn-primary">Ekle</button>
+        <button type="button" id="btnid" class="btn btn-warning">ID ilE GETİR</button>
+        <button type="button" id="btndel" class="btn btn-danger">ID ilE SİL</button>
+    </div>
+
+</div>
+
+
+<div class="p-2" id="listexperience">
+
+</div>
+
+<br />
+
+<div class="col-md-12"> 
+    <h4>ekleme paneli</h4>
+    <input type="text" class="form-control" id="inpname" placeholder="name" />
+    <input type="text" class="form-control" id="inpdate" placeholder="date" />
+    <input type="text" class="form-control" id="inpimage" placeholder="baslık" />
+    <input type="text" class="form-control" id="inpdes" placeholder="baslık" />
+    <input type="text" class="form-control" id="inpsection" placeholder="baslık" />
+
+
+</div>
+
+<div class="col-md-12">
+    <h4>ıd ye göre getirme paneli</h4>
+    <input type="text" class="form-control" id="inpid" placeholder="name" />
+
+</div>
+
+<div class="col-md-12">
+    <h4>ıd ye göre silme paneli</h4>
+    <input type="text" class="form-control" id="deleteid" placeholder="name" />
+
+</div>
+@section Scripts
+{
+    <script>
+        $("#getlistall").click(function () {
+            $.ajax({
+                contentType: "application/json",  //içerik türü
+                dataType: "json",  //veri türü
+                type: "GET",  //get ile mi post ile mi dönsün
+                url: "/ExperienceExampleAjax/ListExperience",  //hangi url çalışınca çalışsın
+
+                success: function (funk) { //başarılı ise
+
+                    let values = jQuery.parseJSON(funk); //aldığımız verileri json ile döndür(jquery js kütüphanesi)
+                    //let ajax üzerinde değişken tanımlamak için komut
+
+                    console.log(values);//console logda çalışır
+
+                    let htmlst = "<table class=table table-bordered> <tr><th>ID</th><th>Başlık</th><th>Tarih</th><th>des</th><th>img</th></tr>";
+                    $.each(values, (ExperienceExampleAjaxIndex, value) => {
+                        htmlst += `<tr><td>${value.ExperID}</td><td>${value.Name}</td><td>${value.Date}</td><td>${value.Description}</td><td>${value.ImageUrl}</td></tr>`
+                    });
+
+                    htmlst += "</table>";
+                    $("#listexperience").html(htmlst);
+                },
+                error: function (err) {
+                    console.error("hata",  err)
+                }
+            });
+        }); //ajax ile listeleme
+
+        $("#btnadd").click(function () {
+            let values={
+                    Name:$("#inpname").val(),
+                    Date:$("#inpdate").val(),
+                    ImageUrl:$("#inpimage").val(),
+                    Description:$("#inpdes").val(),
+                    Section1:$("#inpsection").val()
+                        };
+
+               
+            $.ajax({
+                    type:"Post",
+                    url:"/ExperienceExampleAjax/AddExperience",
+                    data:values,
+                    success:function(func2){
+
+                            console.log(func2);
+                            alert(result.Name+"basarili");
+
+                                           }
+
+
+                  });
+
+
+            });//ajax ile ekleme
+
+
+
+        $("#btnid").click(x=>{
+                let id=$("#inpid").val();
+
+
+                     $.ajax({
+
+                         contentType:"application/json",
+                         dataType:"json",
+                         type:"Get",
+                         url:"/ExperienceExampleAjax/IdFind",
+                         data:{ExperID:id},
+                            success:function(func3){
+                               let values = jQuery.parseJSON(func3);
+                                console.log(values);
+                                 
+                            }
+
+                        });
+                           
+                
+            
+            });//ajax ile id ye göre getirme
+
+
+        $("#btndel").click(x=>{
+
+            let id=$("#deleteid").val();
+
+            $.ajax({
+                url:"/ExperienceExampleAjax/DeleteExper/" + id,
+                type:"post",
+                contentType:"application/json",
+                dataType:"json",
+                success:function(funk4){
+                    loadData();
+                }
+
+
+            });
+        });
+
+
+
+    </script>
+}
+
+<script src="~/lib/jquery/dist/jquery.js"></script>
+

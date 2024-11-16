@@ -1,0 +1,56 @@
+﻿@using EntityLayer.Concrete
+@model List<Skill>
+@{
+    ViewData["Title"] = "SkillIndex";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2 style="color:white;font-weight:bold;text-align:center;margin-top:20px;">Skilss Alanı</h2>
+<br />
+
+
+
+<table class="table table-bordered">
+
+    <tr>
+        <th>ID</th>
+        <th>TİTLE</th>
+        <th>VALUE</th>
+        <th>GÜNCELLE</th>
+        <th>SİL</th>
+       
+    </tr>
+
+    <tbody>
+        @foreach (var x in Model)
+        {
+            <tr>
+                <td>@x.SkillId</td>
+                <td>@x.Title</td>
+                <td>
+                    <div class="progress-bar" role="progressbar" style="width: @x.Value%;" aria-valuenow="@x.Value" aria-valuemin="0" aria-valuemax="100">
+                        @x.Value%
+                    </div>
+                </td>
+                <td>
+                    <a href="/Skill/SkillUpdate/@x.SkillId" class="btn btn-success">GÜNCELLE</a>
+                </td>
+                <td>
+                    <a href="/Skill/SkillDelete/@x.SkillId" class="btn btn-danger">SİL</a>
+                </td>
+                
+
+
+            </tr>
+        }
+
+
+
+    </tbody>
+</table>
+
+<a href="/Skill/SkillAdd">
+
+    <button class="btn btn-primary"> YENİ YETENEK EKLE</button>
+
+</a>

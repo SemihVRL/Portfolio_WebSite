@@ -1,0 +1,67 @@
+﻿@using EntityLayer.Concrete
+@model List<Contact>
+@{
+    ViewData["Title"] = "ContactIndex";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2 style="color:white;font-weight:bold;text-align:center;margin-top:20px;">Contact Alanı</h2>
+<br />
+
+<style>
+    .table-fixed {
+        width: 100%;
+        table-layout: fixed; /* Tablo hücrelerinin genişliğini sabitler */
+        border-collapse: collapse; /* Kenarlıkları birleştirir */
+    }
+
+        .table-fixed th, .table-fixed td {
+            border: 1px solid #ddd; /* Kenarlık rengi ve kalınlığı */
+            padding: 8px; /* Hücre içi boşluk */
+            word-wrap: break-word; /* Uzun kelimelerin bir sonraki satıra geçmesini sağlar */
+            overflow: hidden; /* Taşan metni gizler */
+            text-overflow: ellipsis; /* Taşan metnin sonuna üç nokta ekler */
+        }
+
+        .table-fixed th {
+            background-color: #f2f2f2; /* Başlık hücreleri için arka plan rengi */
+        }
+
+        .table-fixed td.description {
+            max-width: 200px; /* Description alanı için istediğin genişliği ayarla */
+            white-space: nowrap; /* Metnin tek satırda kalmasını sağlar */
+        }
+</style>
+
+<table class="table-fixed">
+    <tr>
+        <th>ID</th>
+        <th>Title</th>
+        <th>Description</th>
+        <th>Mail</th>
+        <th>Phone</th>
+        <th>Güncelle</th>
+        <th>Sil</th>
+    </tr>
+
+    <tbody>
+        @foreach (var x in Model)
+        {
+            <tr>
+                <td>@x.ContactID</td>
+                <td>@x.Title</td>
+                <td class="description">@x.Description</td>
+                <td>@x.Mail</td>
+                <td>@x.Phone</td>
+                <td>
+                    <a href="/Contact2/Contact2Update/@x.ContactID" class="btn btn-success">Güncelle</a>
+                </td>
+                <td>
+                    <a href="/Contact2/Contact2Delete/@x.ContactID" class="btn btn-danger">Sil</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+

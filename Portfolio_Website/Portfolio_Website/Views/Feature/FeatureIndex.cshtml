@@ -1,0 +1,53 @@
+﻿@using EntityLayer.Concrete
+@model List<Feature>
+@{
+    ViewData["Title"] = "FeatureIndex";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2 style="color:white;font-weight:bold;text-align:center;margin-top:20px;">Feature Alanı</h2>
+<br />
+
+
+
+<table class="table table-bordered">
+
+    <tr>
+        <th>ID</th>
+        <th>HEADER</th>
+        <th>NAME</th>
+        <th>TİTLE</th>
+        <th>GÜNCELLE</th>
+        <th>SİL</th>
+     
+
+    </tr>
+
+    <tbody>
+        @foreach (var x in Model)
+        {
+            <tr>
+                <td>@x.FeatureID</td>
+                <td>@x.Header</td>
+                <td>@x.Name</td>
+                <td>@x.Title</td>
+                
+                <td>
+                    <a href="/Feature/FeatureUpdate/@x.FeatureID" class="btn btn-success">GÜNCELLE</a>
+                </td>
+                <td>
+                    <a href="/Feature/FeatureDelete/@x.FeatureID" class="btn btn-danger">SİL</a>
+                </td>
+
+
+
+            </tr>
+        }
+
+
+
+    </tbody>
+</table>
+
+
+

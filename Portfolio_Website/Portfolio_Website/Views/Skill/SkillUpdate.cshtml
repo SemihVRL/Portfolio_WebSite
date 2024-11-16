@@ -1,0 +1,40 @@
+﻿@model EntityLayer.Concrete.Skill
+@{
+    ViewData["Title"] = "SkillUpdate";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2 style="color:white;font-weight:bold;text-align:center;margin-top:20px;">Skill Update Alanı</h2>
+<br />
+<br />
+@using (Html.BeginForm("SkillUpdate", "Skill", FormMethod.Post))
+{
+    <div>
+        @Html.LabelFor(x => x.SkillId)
+        @Html.TextBoxFor(x => x.SkillId, new { @class = "form-control", @readonly = "readonly" })
+
+    </div>
+
+
+
+    <div>
+        <label>TITLE</label>
+        @Html.TextBoxFor(x => x.Title, new { @class = "form-control", })
+
+    </div>
+
+    <div>
+        <label>VALUE</label>
+        @Html.TextBoxFor(x => x.Value, new { @class = "form-control", })
+
+    </div>
+
+    <br />
+    <button class="btn btn-primary">GÜNCELLE</button>
+}
+
+
+
+
+
+

@@ -1,0 +1,54 @@
+﻿@model EntityLayer.Concrete.Feature
+@{
+    ViewData["Title"] = "FeatureUpdate";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2 style="color:white;font-weight:bold;text-align:center;margin-top:20px;">Feature Update Alanı</h2>
+<br />
+<br />
+@using (Html.BeginForm("FeatureUpdate", "Feature", FormMethod.Post))
+{
+    <div>
+        @Html.LabelFor(x => x.FeatureID)
+        @Html.TextBoxFor(x => x.FeatureID, new { @class = "form-control", @readonly = "readonly" })
+
+    </div>
+
+
+
+    <div>
+        <label>HEADER</label>
+        @Html.TextBoxFor(x => x.Header, new { @class = "form-control", })
+
+    </div>
+
+    <div>
+        <label>NAME</label>
+        @Html.TextBoxFor(x => x.Name, new { @class = "form-control", })
+
+    </div>
+
+    <div>
+        <label>TITLE</label>
+        @Html.TextBoxFor(x => x.Title, new { @class = "form-control", })
+
+    </div>
+
+    <div>
+        <label>LİNK</label>
+        @Html.TextBoxFor(x => x.Link, new { @class = "form-control", })
+
+    </div>
+
+    <br />
+    <button class="btn btn-primary">GÜNCELLE</button>
+}
+
+
+
+
+
+
+
+

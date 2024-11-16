@@ -1,0 +1,42 @@
+﻿@using EntityLayer.Concrete
+@model List<WriterUser>
+@{
+    ViewData["Title"] = "WriterUserIndex";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<div class="col-md-6">
+    <div class="p-2">
+        <button type="button" id="getlistall" class="btn btn-primary">Verileri Getir</button>
+    </div>
+
+</div>
+
+
+
+
+
+@section Scripts
+{
+    <script>
+        $("#getlistall").click(function () {
+            $.ajax({
+                contentType: "application/json",//içerik türü
+                dataType: "json",//veri türü 
+                type: "GET",//get ile mi post ile mi dönsün
+                url: "/WriterUser/ListUser", //hangi url çalışınca çalışsın
+
+                success: function (funk) { //başarılı ise 
+                    let users = jQuery.parseJSON(funk);//aldığımız verileri json ile döndür(jquery js kütüphanesi)
+                    //let ajax üzerinde değişken tanımlamak için komut
+                    console.log(users);//console logda çalışır
+                },
+                error: function (err) {
+                    console.error("hata",err)
+                }
+            });
+        });
+    </script>
+}
+
+<script src="~/lib/jquery/dist/jquery.js"></script>

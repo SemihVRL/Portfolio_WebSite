@@ -1,0 +1,109 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\semih\\source\\repos\\Portfolio_Website\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{EE72B638-C580-45AD-BD60-8A7A48E0555E}|Portfolio_Website\\Portfolio_Website.csproj|c:\\users\\semih\\source\\repos\\portfolio_website\\portfolio_website\\views\\about\\aboutupdate.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{EE72B638-C580-45AD-BD60-8A7A48E0555E}|Portfolio_Website\\Portfolio_Website.csproj|solutionrelative:portfolio_website\\views\\about\\aboutupdate.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EE72B638-C580-45AD-BD60-8A7A48E0555E}|Portfolio_Website\\Portfolio_Website.csproj|c:\\users\\semih\\source\\repos\\portfolio_website\\portfolio_website\\views\\shared\\components\\featurelist\\default.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{EE72B638-C580-45AD-BD60-8A7A48E0555E}|Portfolio_Website\\Portfolio_Website.csproj|solutionrelative:portfolio_website\\views\\shared\\components\\featurelist\\default.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EE72B638-C580-45AD-BD60-8A7A48E0555E}|Portfolio_Website\\Portfolio_Website.csproj|c:\\users\\semih\\source\\repos\\portfolio_website\\portfolio_website\\views\\default\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{EE72B638-C580-45AD-BD60-8A7A48E0555E}|Portfolio_Website\\Portfolio_Website.csproj|solutionrelative:portfolio_website\\views\\default\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EE72B638-C580-45AD-BD60-8A7A48E0555E}|Portfolio_Website\\Portfolio_Website.csproj|c:\\users\\semih\\source\\repos\\portfolio_website\\portfolio_website\\views\\contact2\\contact2update.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{EE72B638-C580-45AD-BD60-8A7A48E0555E}|Portfolio_Website\\Portfolio_Website.csproj|solutionrelative:portfolio_website\\views\\contact2\\contact2update.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EE72B638-C580-45AD-BD60-8A7A48E0555E}|Portfolio_Website\\Portfolio_Website.csproj|c:\\users\\semih\\source\\repos\\portfolio_website\\portfolio_website\\controllers\\contact2controller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EE72B638-C580-45AD-BD60-8A7A48E0555E}|Portfolio_Website\\Portfolio_Website.csproj|solutionrelative:portfolio_website\\controllers\\contact2controller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 1,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedHeight": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{0ad07096-bba9-4900-a651-0598d26f6d24}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "AboutUpdate.cshtml",
+              "DocumentMoniker": "C:\\Users\\semih\\source\\repos\\Portfolio_Website\\Portfolio_Website\\Views\\About\\AboutUpdate.cshtml",
+              "RelativeDocumentMoniker": "Portfolio_Website\\Views\\About\\AboutUpdate.cshtml",
+              "ToolTip": "C:\\Users\\semih\\source\\repos\\Portfolio_Website\\Portfolio_Website\\Views\\About\\AboutUpdate.cshtml",
+              "RelativeToolTip": "Portfolio_Website\\Views\\About\\AboutUpdate.cshtml",
+              "ViewState": "AgIAABsAAAAAAAAAAAAAADwAAAAmAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-11-16T22:28:51.356Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Default.cshtml",
+              "DocumentMoniker": "C:\\Users\\semih\\source\\repos\\Portfolio_Website\\Portfolio_Website\\Views\\Shared\\Components\\FeatureList\\Default.cshtml",
+              "RelativeDocumentMoniker": "Portfolio_Website\\Views\\Shared\\Components\\FeatureList\\Default.cshtml",
+              "ToolTip": "C:\\Users\\semih\\source\\repos\\Portfolio_Website\\Portfolio_Website\\Views\\Shared\\Components\\FeatureList\\Default.cshtml",
+              "RelativeToolTip": "Portfolio_Website\\Views\\Shared\\Components\\FeatureList\\Default.cshtml",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAAACgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-11-16T22:16:02.735Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Contact2Update.cshtml",
+              "DocumentMoniker": "C:\\Users\\semih\\source\\repos\\Portfolio_Website\\Portfolio_Website\\Views\\Contact2\\Contact2Update.cshtml",
+              "RelativeDocumentMoniker": "Portfolio_Website\\Views\\Contact2\\Contact2Update.cshtml",
+              "ToolTip": "C:\\Users\\semih\\source\\repos\\Portfolio_Website\\Portfolio_Website\\Views\\Contact2\\Contact2Update.cshtml",
+              "RelativeToolTip": "Portfolio_Website\\Views\\Contact2\\Contact2Update.cshtml",
+              "ViewState": "AgIAABIAAAAAAAAAAAAAACwAAAAEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-11-16T22:07:12.671Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Contact2Controller.cs",
+              "DocumentMoniker": "C:\\Users\\semih\\source\\repos\\Portfolio_Website\\Portfolio_Website\\Controllers\\Contact2Controller.cs",
+              "RelativeDocumentMoniker": "Portfolio_Website\\Controllers\\Contact2Controller.cs",
+              "ToolTip": "C:\\Users\\semih\\source\\repos\\Portfolio_Website\\Portfolio_Website\\Controllers\\Contact2Controller.cs",
+              "RelativeToolTip": "Portfolio_Website\\Controllers\\Contact2Controller.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAABcAAAArAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-16T21:56:47.022Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\semih\\source\\repos\\Portfolio_Website\\Portfolio_Website\\Views\\Default\\Index.cshtml",
+              "RelativeDocumentMoniker": "Portfolio_Website\\Views\\Default\\Index.cshtml",
+              "ToolTip": "C:\\Users\\semih\\source\\repos\\Portfolio_Website\\Portfolio_Website\\Views\\Default\\Index.cshtml",
+              "RelativeToolTip": "Portfolio_Website\\Views\\Default\\Index.cshtml",
+              "ViewState": "AgIAADwAAAAAAAAAAAAAAEsAAAAkAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-11-16T21:50:03.665Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

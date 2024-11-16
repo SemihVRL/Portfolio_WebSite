@@ -1,0 +1,75 @@
+﻿@model EntityLayer.Concrete.About
+@{
+    ViewData["Title"] = "AboutUpdate";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+<h2 style="color:white;font-weight:bold;text-align:center;margin-top:20px;">About Update Alanı</h2>
+<br />
+<br />
+@using (Html.BeginForm("AboutUpdate", "About", FormMethod.Post))
+{
+    <div>
+        @Html.LabelFor(x => x.AboutID)
+        @Html.TextBoxFor(x => x.AboutID, new { @class = "form-control", @readonly = "readonly" })
+
+    </div>
+
+
+
+    <div>
+        <label>TITLE</label>
+        @Html.TextBoxFor(x => x.Title, new { @class = "form-control", })
+
+    </div>
+
+    <div>
+        <label>DESCRİPTİON</label>
+        @Html.TextBoxFor(x => x.Description, new { @class = "form-control", })
+
+    </div>
+
+    <div>
+        <label>AGE</label>
+        @Html.TextBoxFor(x => x.Age, new { @class = "form-control", })
+
+    </div>
+
+     <div>
+        <label>MAİL</label>
+        @Html.TextBoxFor(x => x.Mail, new { @class = "form-control", })
+
+    </div>
+    <div>
+        <label>PHONE</label>
+        @Html.TextBoxFor(x => x.Phone, new { @class = "form-control", })
+
+    </div>
+
+    <div>
+        <label>ADRESS</label>
+        @Html.TextBoxFor(x => x.Address, new { @class = "form-control", })
+
+    </div>
+    <div>
+        <label>ADRESS</label>
+        @Html.TextBoxFor(x => x.SocialMedia, new { @class = "form-control", })
+
+    </div>
+
+    <div>
+        <label>ADRESS</label>
+        @Html.TextBoxFor(x => x.Status, new { @class = "form-control", })
+
+    </div>
+
+@*     <div>
+        <label>IMAGE</label>
+        @Html.TextBoxFor(x => x.ImageUrl, new { @class = "form-control", })
+
+    </div> *@
+    <br />
+    <button class="btn btn-primary">GÜNCELLE</button>
+}
+
+
+

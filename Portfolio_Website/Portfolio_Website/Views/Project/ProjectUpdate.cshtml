@@ -1,0 +1,48 @@
+﻿@model EntityLayer.Concrete.Portfolio
+@{
+    ViewData["Title"] = "ProjectUpdate";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<<h2 style="color:white;font-weight:bold;text-align:center;margin-top:20px;">Proje Update Alanı</h2>
+<br />
+<br />
+@using(Html.BeginForm("ProjectUpdate", "Project", FormMethod.Post))
+{
+    <div>
+        @Html.LabelFor(x => x.PortID)
+        @Html.TextBoxFor(x => x.PortID, new { @class = "form-control", @readonly = "readonly" })
+
+    </div>
+
+
+
+    <div>
+        <label>NAME</label>
+        @Html.TextBoxFor(x => x.Name, new { @class = "form-control", })
+
+    </div>
+
+    <div>
+        <label>IMAGE1</label>
+        @Html.TextBoxFor(x => x.ImageUrl, new { @class = "form-control", })
+
+    </div>
+    <div>
+        <label>IMAGE2</label>
+        @Html.TextBoxFor(x => x.ImageUrl2, new { @class = "form-control", })
+
+    </div>
+
+    <div>
+        <label>PROJE URL</label>
+        @Html.TextBoxFor(x => x.ProjeUrl, new { @class = "form-control", })
+
+    </div>
+
+    
+    <br />
+    <button class="btn btn-primary">GÜNCELLE</button>
+
+
+}

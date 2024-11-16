@@ -1,0 +1,76 @@
+﻿@using EntityLayer.Concrete
+@model List<Experience>
+@{
+    ViewData["Title"] = "ExperienceIndex";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2 style="color:white;font-weight:bold;text-align:center;margin-top:20px;">Experience Alanı</h2>
+<br />
+<style>
+
+    .table-fixed {
+        width: 100%;
+        table-layout: fixed; /* Tablo hücrelerinin genişliğini sabitler */
+        border-collapse: collapse; /* Kenarlıkları birleştirir */
+    }
+
+        .table-fixed th, .table-fixed td {
+            border: 1px solid #ddd; /* Kenarlık rengi ve kalınlığı */
+            padding: 8px; /* Hücre içi boşluk */
+            word-wrap: break-word; /* Uzun kelimelerin bir sonraki satıra geçmesini sağlar */
+            overflow: hidden; /* Taşan metni gizler */
+            text-overflow: ellipsis; /* Taşan metnin sonuna üç nokta ekler */
+        }
+
+        .table-fixed th {
+            background-color: #f2f2f2; /* Başlık hücreleri için arka plan rengi */
+        }
+
+        .table-fixed td.description {
+            max-width: 200px; /* Description alanı için istediğin genişliği ayarla */
+            white-space: nowrap; /* Metnin tek satırda kalmasını sağlar */
+        }
+
+</style>
+
+<table class="table-fixed">
+
+    <tr>
+        <th>ID</th>
+        <th>NAME</th>
+        <th>DATE</th>
+        <th class="description">DESCRİPTİON</th>
+        <th>SECTİON</th>
+        <th>GÜNCELLE</th>
+        <th>SİL</th>
+
+    </tr>
+
+    <tbody>
+        @foreach (var x in Model)
+        {
+            <tr>
+                <td>@x.ExperID</td>
+                <td>@x.Name</td>
+                <td>@x.Date</td>
+                <td class="description">@x.Description</td>
+                <td>@x.Section1</td>
+                <td>
+                    <a href="/Experience/ExperienceUpdate/@x.ExperID" class="btn btn-success">GÜNCELLE</a>
+                </td>
+                <td>
+                    <a href="/Experience/ExperienceDelete/@x.ExperID" class="btn btn-danger">SİL</a>
+                </td>
+
+
+            </tr>
+        }
+
+
+
+    </tbody>
+</table>
+
+<a href="/Experience/ExperienceAdd"><button class="btn btn-primary"> YENİ DENEYİM EKLE</button></a>
+

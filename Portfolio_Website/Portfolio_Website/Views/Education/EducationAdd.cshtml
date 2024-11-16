@@ -1,0 +1,49 @@
+﻿@model EntityLayer.Concrete.School
+@{
+    ViewData["Title"] = "EducationAdd";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2 style="color:white;font-weight:bold;text-align:center;margin-top:20px;">Education Add Alanı</h2>
+<br />
+<br />
+@using (Html.BeginForm("EducationAdd", "Education", FormMethod.Post))
+{
+    <div>
+        @Html.LabelFor(x => x.SchoolID)
+        @Html.TextBoxFor(x => x.SchoolID, new { @class = "form-control", @readonly = "readonly" })
+
+    </div>
+
+
+
+    <div>
+        <label>NAME</label>
+        @Html.TextBoxFor(x => x.Name, new { @class = "form-control", })
+
+    </div>
+
+    <div>
+        <label>DATE</label>
+        @Html.TextBoxFor(x => x.Date, new { @class = "form-control", })
+
+    </div>
+
+  
+    
+    <div>
+        <label>SECTİON</label>
+        @Html.TextBoxFor(x => x.Section, new { @class = "form-control", })
+
+    </div>
+
+    <div>
+        <label>ımage</label>
+        @Html.TextBoxFor(x => x.Image, new { @class = "form-control", })
+
+    </div>
+    <br />
+    <button class="btn btn-primary">EKLE</button>
+}
+
+

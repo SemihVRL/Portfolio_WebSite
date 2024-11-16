@@ -1,0 +1,59 @@
+﻿@model EntityLayer.Concrete.Contact
+@{
+    ViewData["Title"] = "Contact2Update";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+
+
+<h2 style="color:white;font-weight:bold;text-align:center;margin-top:20px;">contact2 Update Alanı</h2>
+<br />
+<br />
+@using (Html.BeginForm("Contact2Update", "Contact2", FormMethod.Post))
+{
+    <div>
+        @Html.LabelFor(x => x.ContactID)
+        @Html.TextBoxFor(x => x.ContactID, new { @class = "form-control", @readonly = "readonly" })
+
+    </div>
+
+
+
+    <div>
+        <label>TITLE</label>
+        @Html.TextBoxFor(x => x.Title, new { @class = "form-control", })
+
+    </div>
+
+    <div>
+        <label>DESCRİPTİON</label>
+        @Html.TextBoxFor(x => x.Description, new { @class = "form-control", })
+
+    </div>
+
+    <div>
+        <label>MAİL</label>
+        @Html.TextBoxFor(x => x.Mail, new { @class = "form-control", })
+
+    </div>
+
+    <div>
+        <label>PHONE</label>
+        @Html.TextBoxFor(x => x.Phone, new { @class = "form-control", })
+
+    </div>
+    
+
+    @*     <div>
+        <label>IMAGE</label>
+        @Html.TextBoxFor(x => x.ImageUrl, new { @class = "form-control", })
+
+    </div> *@
+    <br />
+    <button class="btn btn-primary">GÜNCELLE</button>
+}
+
+
+
+
+

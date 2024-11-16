@@ -1,0 +1,52 @@
+﻿@using EntityLayer.Concrete
+@model List<Portfolio>
+@{
+    ViewData["Title"] = "ProjectIndex";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2 style="color:white;font-weight:bold;text-align:center;margin-top:20px;">Project Alanı</h2>
+<br />
+
+
+
+<table class="table table-bordered">
+
+    <tr>
+        <th>ID</th>
+        <th>NAME</th>
+        <th>PROJE URL</th>
+        
+
+    </tr>
+
+    <tbody>
+        @foreach (var x in Model)
+        {
+            <tr>
+                <td>@x.PortID</td>
+                <td>@x.Name</td>
+                <td>@x.ProjeUrl</td>
+                <td>
+                    <a href="/Project/ProjectUpdate/@x.PortID" class="btn btn-success">GÜNCELLE</a>
+                </td>
+                <td>
+                    <a href="/Project/ProjectDelete/@x.PortID" class="btn btn-danger">SİL</a>
+                </td>
+
+
+            </tr>
+        }
+
+
+
+    </tbody>
+</table>
+
+
+<a href="/Project/ProjectAdd">
+
+    <button class="btn btn-primary"> YENİ PROJE EKLE</button>
+
+</a>
+

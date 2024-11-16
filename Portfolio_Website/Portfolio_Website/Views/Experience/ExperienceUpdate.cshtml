@@ -1,0 +1,53 @@
+﻿@model EntityLayer.Concrete.Experience
+@{
+    ViewData["Title"] = "ExperienceUpdate";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2 style="color:white;font-weight:bold;text-align:center;margin-top:20px;">Experience Update Alanı</h2>
+<br />
+<br />
+@using (Html.BeginForm("ExperienceUpdate", "Experience", FormMethod.Post))
+{
+    <div>
+        @Html.LabelFor(x => x.ExperID)
+        @Html.TextBoxFor(x => x.ExperID, new { @class = "form-control", @readonly = "readonly" })
+
+    </div>
+
+
+
+    <div>
+        <label>NAME</label>
+        @Html.TextBoxFor(x => x.Name, new { @class = "form-control", })
+
+    </div>
+
+    <div>
+        <label>DATE</label>
+        @Html.TextBoxFor(x => x.Date, new { @class = "form-control", })
+
+    </div>
+
+    <div>
+        <label>DESCRİPTİON</label>
+        @Html.TextBoxFor(x => x.Description, new { @class = "form-control", })
+
+    </div>
+
+    <div>
+        <label>IMAGE</label>
+        @Html.TextBoxFor(x => x.ImageUrl, new { @class = "form-control", })
+
+    </div>
+    <div>
+        <label>SECTİON</label>
+        @Html.TextBoxFor(x => x.Section1, new { @class = "form-control", })
+
+    </div>
+    <br />
+    <button class="btn btn-primary">GÜNCELLE</button>
+}
+
+
+
